@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="A special birthday surprise for Pravya — a cinematic blue-themed birthday experience made with love and care." />
+  <title>Happy Birthday, Pravya 💙</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+    rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- ═══════════════════════════════════════════
+       LOADING SCREEN
+  ═══════════════════════════════════════════ -->
+  <section id="loading-screen" aria-label="Loading screen">
+    <canvas id="loading-canvas"></canvas>
+    <div class="loading-content">
+      <div class="loading-icon">💙</div>
+      <p class="loading-text">A little birthday surprise...</p>
+      <button id="begin-btn" class="begin-btn" aria-label="Begin the birthday experience">
+        <span class="btn-sparkle">✨</span> Begin
+      </button>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       MAIN SITE
+  ═══════════════════════════════════════════ -->
+  <main id="main-site" class="hidden" aria-label="Birthday website main content">
+
+    <!-- ── NAV ── -->
+    <nav id="main-nav" aria-label="Main navigation">
+      <div class="nav-logo">💙</div>
+      <ul class="nav-links">
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#letter">Letter</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#videos">Moments</a></li>
+        <li><a href="#blue-world">Blue World</a></li>
+        <li><a href="#cake">Cake</a></li>
+        <li><a href="#wishes">Wishes</a></li>
+      </ul>
+      <button class="nav-hamburger" aria-label="Toggle menu" id="hamburger-btn">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+
+    <!-- ── HERO SECTION ── -->
+    <section id="hero" aria-label="Hero section">
+      <canvas id="hero-canvas"></canvas>
+      <div class="clouds-container" id="clouds-container" aria-hidden="true"></div>
+      <div class="waves-container" aria-hidden="true">
+        <div class="wave wave-1"></div>
+        <div class="wave wave-2"></div>
+        <div class="wave wave-3"></div>
+      </div>
+      <div class="particles-container" id="hero-particles" aria-hidden="true"></div>
+      <div class="hero-content">
+        <div class="hero-badge reveal-item">— A Birthday Celebration —</div>
+        <h1 class="hero-title reveal-item">
+          Happy Birthday,<br />
+          <span class="hero-name">Pravya<span class="name-accent">(Gadhi)</span></span>
+          <span class="hero-emoji">🎂</span>
+        </h1>
+        <p class="hero-subtitle reveal-item">
+          "Wishing you a day filled with happiness, laughter,<br />and everything that makes you smile."
+        </p>
+        <a href="#letter" class="hero-cta reveal-item" aria-label="Read the birthday letter">
+          Read the letter 💌
+        </a>
+      </div>
+      <div class="scroll-indicator" aria-hidden="true">
+        <div class="scroll-dot"></div>
+      </div>
+    </section>
+
+    <!-- ── BIRTHDAY LETTER ── -->
+    <section id="letter" aria-label="Birthday letter section">
+      <div class="section-container">
+        <div class="section-header reveal-item">
+          <span class="section-tag">From the heart</span>
+          <h2 class="section-title">💌 A Little Letter</h2>
+        </div>
+        <div class="letter-card glass-card reveal-item">
+          <div class="letter-decoration top-left" aria-hidden="true">❝</div>
+          <div class="letter-decoration bottom-right" aria-hidden="true">❞</div>
+          <p class="letter-greeting">Dear Pravya,</p>
+          <p id="letter-text" class="letter-body"></p>
+          <div class="letter-cursor" id="letter-cursor" aria-hidden="true">|</div>
+          <p class="letter-sign">With warmth and good wishes 💙<br /><span>— Swaroop</span></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── PHOTO GALLERY ── -->
+    <section id="gallery" aria-label="Photo gallery section">
+      <div class="section-container">
+        <div class="section-header reveal-item">
+          <span class="section-tag">Captured moments</span>
+          <h2 class="section-title">YOU</h2>
+        </div>
+        <div class="gallery-grid reveal-item" id="gallery-grid" role="list" aria-label="Photo gallery"></div>
+      </div>
+      <!-- Lightbox -->
+      <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Photo viewer" hidden>
+        <button class="lightbox-close" id="lightbox-close" aria-label="Close lightbox">✕</button>
+        <button class="lightbox-prev" id="lightbox-prev" aria-label="Previous photo">‹</button>
+        <button class="lightbox-next" id="lightbox-next" aria-label="Next photo">›</button>
+        <div class="lightbox-content">
+          <img id="lightbox-img" src="" alt="" />
+          <p id="lightbox-caption" class="lightbox-caption"></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── VIDEO GALLERY ── -->
+    <section id="videos" aria-label="Video gallery section">
+      <div class="section-container">
+        <div class="section-header reveal-item">
+          <span class="section-tag">Moments in motion</span>
+          <h2 class="section-title">Moments</h2>
+        </div>
+        <div class="videos-grid reveal-item" id="videos-grid" role="list" aria-label="Video gallery"></div>
+      </div>
+      <!-- Video Modal -->
+      <div id="video-modal" class="video-modal" role="dialog" aria-modal="true" aria-label="Video player" hidden>
+        <button class="video-modal-close" id="video-modal-close" aria-label="Close video">✕</button>
+        <button class="video-modal-fullscreen" id="video-modal-fullscreen" aria-label="Toggle fullscreen">⛶</button>
+        <div class="video-modal-content">
+          <video id="modal-video" controls playsinline preload="metadata"></video>
+          <p id="modal-video-caption" class="video-caption"></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── BLUE WORLD ── -->
+    <section id="blue-world" aria-label="Blue world section">
+      <canvas id="blue-world-canvas"></canvas>
+      <div class="bw-clouds" id="bw-clouds" aria-hidden="true"></div>
+      <div class="bw-birds" id="bw-birds" aria-hidden="true"></div>
+      <div class="bw-bubbles" id="bw-bubbles" aria-hidden="true"></div>
+      <div class="bw-moon" id="bw-moon" aria-label="Click the moon for a surprise" tabindex="0" role="button">
+        <div class="moon-glow" aria-hidden="true"></div>
+        <div class="moon-body" aria-hidden="true">🌙</div>
+      </div>
+      <div class="bw-waves" aria-hidden="true">
+        <div class="bw-wave bw-wave-1"></div>
+        <div class="bw-wave bw-wave-2"></div>
+        <div class="bw-wave bw-wave-3"></div>
+      </div>
+      <div class="bw-content">
+        <div class="section-header">
+          <span class="section-tag" style="color: var(--ice-blue);">A world of blue</span>
+          <h2 class="section-title" style="color: #fff;">🌊 Blue World</h2>
+        </div>
+        <blockquote class="bw-quote glass-card reveal-item">
+          "Some colors bring peace. I hope this little world of blue brings a smile to your face."
+        </blockquote>
+      </div>
+      <!-- Easter egg: hidden message when 5 stars clicked -->
+      <div class="bw-stars" id="bw-stars" aria-hidden="true"></div>
+      <div class="hidden-message" id="hidden-message" aria-live="polite" hidden>
+        <div class="hidden-message-card glass-card">
+          ⭐ "Hope today is your happiest one yet." ⭐
+        </div>
+      </div>
+    </section>
+
+    <!-- ── BIRTHDAY CAKE ── -->
+    <section id="cake" aria-label="Birthday cake section">
+      <div class="section-container">
+        <div class="section-header reveal-item">
+          <span class="section-tag">Make a wish</span>
+          <h2 class="section-title">🎂 Birthday Cake</h2>
+        </div>
+        <div class="cake-wrapper reveal-item">
+          <div class="cake-container" id="cake-container" role="button" tabindex="0"
+            aria-label="Click the cake to make a wish">
+            <!-- Cake SVG drawn via CSS -->
+            <div class="cake" id="cake">
+              <div class="cake-top-layer">
+                <div class="cake-frosting"></div>
+                <div class="candles-row" id="candles-row" aria-label="Birthday candles"></div>
+              </div>
+              <div class="cake-middle-layer">
+                <div class="cake-stripe"></div>
+              </div>
+              <div class="cake-bottom-layer">
+                <div class="cake-stripe"></div>
+              </div>
+              <div class="cake-plate"></div>
+            </div>
+          </div>
+          <p class="cake-hint">Click the cake to make a wish ✨</p>
+          <div class="wish-text" id="wish-text" aria-live="polite">Make a wish ✨</div>
+        </div>
+        <div id="confetti-container" class="confetti-container" aria-hidden="true"></div>
+        <div id="balloons-container" class="balloons-container" aria-hidden="true"></div>
+      </div>
+    </section>
+
+
+    <!-- ── FINAL WISHES ── -->
+
+    <section id="wishes" aria-label="Final wishes section">
+      <div class="wishes-bg" aria-hidden="true">
+        <canvas id="wishes-canvas"></canvas>
+      </div>
+
+      <div class="section-container">
+        <div class="section-header reveal-item">
+          <span class="section-tag" style="color: var(--ice-blue);">
+            Always and always
+          </span>
+          <h2 class="section-title" style="color:#fff;">🌠 Final Wishes</h2>
+        </div>
+
+        <div class="wishes-card glass-card reveal-item">
+          <p class="wishes-text">
+            May your days always be filled with happiness, your dreams keep growing,
+            your smile never fades, and your favorite shade of blue always remind you
+            of peaceful skies and endless oceans.
+          </p>
+
+          <div class="wishes-divider" aria-hidden="true">🌊</div>
+
+          <p class="wishes-birthday">Happy Birthday 💙</p>
+
+          <p class="wishes-text final-note">
+            And always remember...
+          </p>
+
+          <p class="wishes-age">
+            💙 ✨ AGE IS JUST A NUMBER ✨ 💙
+          </p>
+        </div>
+
+        <footer class="site-footer">
+          <p>Made with care by <strong>Swaroop</strong> 💙</p>
+        </footer>
+
+      </div>
+    </section>
+
+  </main><!-- /main-site -->
+
+  <script src="script.js"></script>
+</body>
+
+</html>
