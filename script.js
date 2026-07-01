@@ -31,12 +31,12 @@ Happy Birthday once again, Gadhi. 🎂
  * Seed numbers are fixed so they always show the same photo.
  */
 const GALLERY_IMAGES = [
-    { src: 'assets/images/IMG_5922.PNG', caption: 'A beautiful day 💙' },
-    { src: 'assets/images/IMG_7930.PNG', caption: 'Golden moments' },
-    { src: 'assets/images/IMG_7085.PNG', caption: 'Smiling always ✨' },
-    { src: 'assets/images/IMG_7931.PNG', caption: 'Pure joy 🎉' },
-    { src: 'assets/images/IMG_7932.PNG', caption: 'Laughing out loud' },
-    { src: 'assets/images/IMG_7933.PNG', caption: 'You glow 💫' },
+    { src: 'assets/images/IMG_5922.PNG', caption: 'Pagli 😋' },
+    { src: 'assets/images/IMG_7930.PNG', caption: 'Nakhrebaaz 🐶' },
+    { src: 'assets/images/IMG_7085.PNG', caption: 'Khadoos 😒' },
+    { src: 'assets/images/IMG_7931.PNG', caption: 'Sundar, offc. 🥹' },
+    { src: 'assets/images/IMG_7932.PNG', caption: 'Bhondu 🥹' },
+    { src: 'assets/images/IMG_7933.PNG', caption: 'Did I mention… sundar? 🥹' },
     { src: 'assets/images/IMG_7935.PNG', caption: 'Happy birthday! 🎂' }
 ];
 
