@@ -1056,6 +1056,11 @@ body {
   border-radius: 1rem;
   box-shadow: 0 30px 80px rgba(0, 0, 0, 0.6);
   background: #000;
+  /* Force GPU compositing layer — fixes blank video on desktop browsers */
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+  isolation: isolate;
+  will-change: transform;
 }
 
 .video-caption {

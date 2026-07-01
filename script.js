@@ -46,7 +46,7 @@ const GALLERY_IMAGES = [
  * Example: { src: 'assets/videos/clip1.mp4', caption: 'The best day ever', thumb: 'assets/images/thumb1.jpg' }
  */
 const GALLERY_VIDEOS = [
-    { src: 'assets/videos/0538C77F-FE68-48C9-8BE1-B582B502110C.mp4', caption: 'Happiest birthday pagal😏🫶', thumb: 'assets/images/IMG_7930.PNG' },
+    { src: 'assets/videos/birthday-video.mp4', caption: 'Happiest birthday pagal😏🫶', thumb: 'assets/images/IMG_7930.PNG' },
 
 ];
 
