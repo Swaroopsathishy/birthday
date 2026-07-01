@@ -10,15 +10,16 @@
    ════════════════════════════════════════════════════ */
 
 /** Birthday letter message — edit freely */
-const BIRTHDAY_LETTER = `I hope today brings you lots of happiness, wonderful surprises, and beautiful memories. May every moment of this day feel like a small gift — one you truly deserve.
+const BIRTHDAY_LETTER = `Happy Birthday to my favourite person 🥹💙
 
-This year has so many exciting things in store for you. I hope it brings you good health, amazing adventures, great opportunities, and countless reasons to smile.
+You’re honestly one of the best things that has happened to me. Thank you for being the person who can make even an ordinary day feel special with just a text. I’ll never stop annoying you because that’s what I do to the people who have a special place in my heart, but you know I’ll always be there for you.
 
-Here's to you — the kind of person who lights up every room without even trying, who makes ordinary days feel a little more special just by being there.
+I hope I get to see that beautiful smile on your face forever. And always remember, whenever you’re sad or feeling low, I’ll be there to talk to you. You’re never alone, because I’ll always have your back.
 
-May your favourite shade of blue always remind you of calm skies and peaceful oceans — and of how brilliant and wonderful you are.
+On your special day, I just want you to be happy, surrounded by love, laughter, and everything that makes you smile. Stay the amazing person you are, and never change for anyone.
 
-Happy Birthday, Pravya! 🎂`;
+Happy Birthday once again, Gadhi. 🎂
+💙`;
 
 /**
  * PHOTO GALLERY
