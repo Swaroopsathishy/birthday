@@ -10,16 +10,23 @@
    ════════════════════════════════════════════════════ */
 
 /** Birthday letter message — edit freely */
-const BIRTHDAY_LETTER = `Happy Birthday to my favourite person 🥹💙
+const BIRTHDAY_LETTER = `Happy Birthday, Pagli! 🥹💙
 
-You’re honestly one of the best things that has happened to me. Thank you for being the person who can make even an ordinary day feel special with just a text. I’ll never stop annoying you because that’s what I do to the people who have a special place in my heart, but you know I’ll always be there for you.
+Hope you have the happiest birthday because you genuinely deserve it.
 
-I hope I get to see that beautiful smile on your face forever. And always remember, whenever you’re sad or feeling low, I’ll be there to talk to you. You’re never alone, because I’ll always have your back.
+Thank you for being someone who can make even the most ordinary day feel a little better with just a text. Life is definitely more like life with you around.
 
-On your special day, I just want you to be happy, surrounded by love, laughter, and everything that makes you smile. Stay the amazing person you are, and never change for anyone.
+Bas aise hi hasti rehna… hasti he tho zyada pyari lagti hai. 🥹
 
-Happy Birthday once again, Gadhi. 🎂
-💙`;
+Sorry if i bother u  sometimes but its just that i want to talk to you Aur haan.. daant math merko hamesha 😤.
+
+Whenever life feels a little heavy, yaad rakhna… main sirf ek text ya call door hoon. No matter what, you’ve always got someone cheering for you.
+
+Khush rehna, mast rehna, aur hamesha apni tarah hi rehna. Kisi ke liye khud ko kabhi mat badalna.
+
+May this year bring you lots of happiness, good memories, and everything you’ve been wishing for.
+
+Happiest birthday , Gadhi! 🎂💙`;
 
 /**
  * PHOTO GALLERY
@@ -528,7 +535,7 @@ function initVideoGallery() {
         document.body.style.overflow = '';
         // Exit fullscreen if active
         if (document.fullscreenElement) {
-            document.exitFullscreen().catch(() => {});
+            document.exitFullscreen().catch(() => { });
         }
     }
 
@@ -541,10 +548,10 @@ function initVideoGallery() {
                     mFullscreen.textContent = '⛶'; // already in FS
                 }).catch(() => {
                     // Fallback: try fullscreen on modal content
-                    modal.querySelector('.video-modal-content').requestFullscreen().catch(() => {});
+                    modal.querySelector('.video-modal-content').requestFullscreen().catch(() => { });
                 });
             } else {
-                document.exitFullscreen().catch(() => {});
+                document.exitFullscreen().catch(() => { });
             }
         });
     }
